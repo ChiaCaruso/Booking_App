@@ -1,0 +1,96 @@
+/* ---BASE--- */
+*{
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+img{
+    display: block;
+}
+
+body{
+    background: linear-gradient(0.25turn, #3d7277, #e3eff0);
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px; 
+    color: #fff;
+    line-height: 30px;
+}
+
+a{
+    color: #fff;
+}
+
+h1{
+    font-size: 40px;
+    line-height: 70px;
+}
+
+h3{
+    font-size: 30px;
+    line-height: 40px;
+}
+
+.btn{
+    background: #95a3c3;
+    color: #fff;
+    padding: 10px;
+    margin-top: 30px;
+    transition: all 0.2s;
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 30px;
+    border-radius: 8px;
+    border: 1px solid #95a3c3;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+    transform: scale(1.1)
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px; 
+    
+    color: #fff;
+    align-items: center;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    position: absolute;
+    color: #fff;
+    justify-content: center;
+    padding: 10px;
+    font-size: 16px;
+    bottom: 0;
+    margin: 20px auto;
+}
+
+footer img{
+    margin-right: 15px;
+}
+
+/* ---MODALE--- */
+.modal {
+    background: #95a3c3;
+    color: #fff;
+    margin: 50px 120px;
+    padding: 30px 60px 20px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 8px;
+  }
+  
+  .userPage {
+      margin: 20px 80px;
+      text-align: center;
+  }
+
