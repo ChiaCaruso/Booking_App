@@ -1,3 +1,5 @@
-fetch ("https://jsonplaceholder.typicode.com/todos")
-    .then ((response) => response.json())
-    .then
+const API = "https://jsonplaceholder.typicode.com/todos";
+
+const render = (wrapper, elements) => {wrapper.innerHtml = elements};
+
+export { API, render } 
