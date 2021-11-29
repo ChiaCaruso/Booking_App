@@ -1,4 +1,5 @@
 /* ---BASE--- */
+
 *{
     box-sizing: border-box; 
     margin: 0; 
@@ -14,44 +15,36 @@ img{
 }
 
 body{
-    background: linear-gradient(0.25turn, #3d7277, #e3eff0);
-    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(#3d7277, #e3eff0);
+    font-family: 'Raleway', sans-serif;
     font-size: 20px; 
     color: #fff;
     line-height: 30px;
+    font-weight: 300;
 }
 
-a{
-    color: #fff;
-}
-
-h1{
-    font-size: 40px;
-    line-height: 70px;
-}
-
-h3{
-    font-size: 30px;
-    line-height: 40px;
-}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 500;
+  }
 
 .btn{
-    background: #95a3c3;
+    background: #a896b9;
     color: #fff;
     padding: 10px;
-    margin-top: 30px;
     transition: all 0.2s;
     cursor: pointer;
     font-weight: bold;
-    line-height: 30px;
+    display: block;
+    margin: 30px;
     border-radius: 8px;
-    border: 1px solid #95a3c3;
-    transition: all 0.3s ease-in-out;
-}
-
+    border: 2px solid #a896b9;
+  }
+  
 .btn:hover{
     transform: scale(1.1)
-}
+  }
+
+/* ---HEADER--- */
 
 header{
     display: flex;
@@ -62,35 +55,76 @@ header{
     align-items: center;
 }
 
-footer{
-    width: 100%;
+/* ---MAIN--- */
+
+main{
+    margin: 50px 70px;
     display: flex;
-    position: absolute;
-    color: #fff;
+}
+
+.container{
+    margin: 0 20px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+    border-radius: 16px;
+}
+
+.container h3{
+    margin: 20px 0;
+}
+
+/* ---FOOTER--- */
+
+footer{
+    display: flex;
     justify-content: center;
     padding: 10px;
     font-size: 16px;
     bottom: 0;
-    margin: 20px auto;
+    color: #3f7378;
+    margin-top: 200px;
 }
 
 footer img{
     margin-right: 15px;
 }
 
-/* ---MODALE--- */
-.modal {
-    background: #95a3c3;
-    color: #fff;
-    margin: 50px 120px;
-    padding: 30px 60px 20px;
-    display: flex;
-    justify-content: space-around;
-    border-radius: 8px;
-  }
-  
-  .userPage {
-      margin: 20px 80px;
-      text-align: center;
-  }
+/* Button 3e */
+.btn-3e {
+	padding: 25px 120px 25px 60px;
+	overflow: hidden;
+}
+
+.btn-3e:before {
+	left: auto;
+	right: 10px;
+	z-index: 2;
+}
+
+.btn-3e:after {
+	width: 30%;
+	height: 200%;
+	background: rgba(255,255,255,0.1);
+	z-index: 1;
+	right: 0;
+	top: 0;
+	margin: -5px 0 0 -5px;
+	-webkit-transform-origin: 0 0;
+	-webkit-transform: rotate(-20deg);
+	-moz-transform-origin: 0 0;
+	-moz-transform: rotate(-20deg);
+	-ms-transform-origin: 0 0;
+	-ms-transform: rotate(-20deg);
+	transform-origin: 0 0;
+	transform: rotate(-20deg);
+}
+
+.btn-3e:hover:after {
+	width: 40%;
+}
+
 
