@@ -3,6 +3,8 @@ import { render } from "../js/data.js";
 const mainPage = () => {
 
     const wrapper = document.querySelector("#wrapper");
+    wrapper.className = "wrapper-mainPage";
+
     render(wrapper, `
         <div class="container">
         <img src="./img/todo.png" alt="To do" width="60">
