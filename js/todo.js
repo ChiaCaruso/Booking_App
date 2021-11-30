@@ -1,9 +1,10 @@
-import { render } from "../js/data.js"
+import { render } from "../js/data.js";
 
 const toDo = (data) => {
+
     const todoItems = data
         .filter(checked => checked.completed)
-        .map(item => `<li>${item.title}</li>`)  
+        .map(item => `<li>${item.title}</li>`)
         .join("");
 
     const wrapper = document.querySelector("#wrapper");
@@ -13,9 +14,6 @@ const toDo = (data) => {
             <h3>Prenotazioni in attesa</h3>
             <ul>${todoItems}</ul>
         </div>`);
-
-        console.log(todoItems);
-
 }
 
 export { toDo };

@@ -49,16 +49,15 @@ h1, h2, h3, h4, h5, h6{
 header{
     display: flex;
     justify-content: space-between;
-    padding: 20px 40px; 
-    
+    padding: 20px 40px;     
     color: #fff;
     align-items: center;
 }
 
 /* ---MAIN--- */
 
-main{
-    margin: 50px 70px;
+#wrapper{
+    margin: 100px 70px;
     display: flex;
 }
 
