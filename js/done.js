@@ -8,10 +8,13 @@ const done = (data) => {
         .join("");
 
     const wrapper = document.querySelector("#wrapper");
+    wrapper.className = "wrapper-toDo-Done";
 
     render(wrapper, `
+        <div class="banner-list">
+        <h3>Visite completate</h3>
+        </div>
         <div class="wrapper-list">
-            <h3>Visite completate</h3>
             <ul>${doneItems}</ul>
         </div>`);
 }
