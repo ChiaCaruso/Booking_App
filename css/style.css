@@ -34,7 +34,6 @@ a{
     transition: all 0.2s;
     cursor: pointer;
     font-weight: bold;
-    display: block;
     margin: 30px;
     border-radius: 8px;
     border: 2px solid #d08f37;
@@ -62,7 +61,7 @@ header{
     display: flex;
 }
 
-.wrapper-toDo-Done{
+.wrapper-hash{
     margin: 100px 70px;
     flex-direction: column;
 }
@@ -85,22 +84,24 @@ header{
 
 /* ---LISTE--- */
 
-.banner-list-todo{
+.banner-list{
     width: 100%;
     height: 300px;
-    background-image: url(../img/banner-list-todo.png);
     background-size: cover;
     background-position-y: -50px;
     background-repeat: no-repeat;
 }
 
+.banner-list-todo{
+    background-image: url(../img/banner-list-todo.png);
+}
+
 .banner-list-done{
-    width: 100%;
-    height: 300px;
     background-image: url(../img/banner-list-done.png);
-    background-size: cover;
-    background-position-y: -50px;
-    background-repeat: no-repeat;
+}
+
+.banner-list-add{
+    background-image: url(../img/banner-list-add.png);
 }
 
 .banner-list h3{
@@ -189,6 +190,36 @@ margin-right: 12px;
     background: none;
     border: none;
     opacity: 1;
+}
+
+/* ---PAGE ADD--- */
+
+#wrapper-form{
+    margin: 50px auto;
+    width: 600px;
+    background-color: #006473;
+    border-radius: 16px;
+    padding: 30px;
+}
+
+form{
+    text-align: center;
+}
+
+#wrapper-form .row{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#wrapper-form .row input,
+#wrapper-form .row textarea{
+    width: 50%;
+    padding: 10px;
+}
+
+#wrapper-form .row textarea{
+    resize: vertical;
 }
 
 /* ---FOOTER--- */

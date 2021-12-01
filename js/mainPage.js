@@ -21,7 +21,7 @@ const mainPage = () => {
         <div class="container">
         <img src="./img/add.png" alt="Aggiungi" width="60">
         <h3>Aggiungi prenotazione</h3>
-        <a href="#add"><button id="done-btn" class="btn">VAI</button></a>
+        <a href="#add"><button id="add-btn" class="btn">VAI</button></a>
         </div>`);
 };
 
