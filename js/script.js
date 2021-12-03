@@ -4,42 +4,36 @@ import { toDo } from "../js/todo.js"
 import { done } from "../js/done.js"
 import { add } from "../js/add.js"
 
+
 document.addEventListener('DOMContentLoaded', mainPage);
 
+/**
+ * Statement for change location in the page
+ */
 
-// window.onload = function () {
+window.addEventListener('hashchange', () => {
+    switch (location.hash) {
 
-//     const toDoBTN = document.querySelector("#todo-btn");
-//     toDoBTN.addEventListener("click", () => {
-//         fetch(API)
-//             .then((response) => response.json())
-//             .then((data) => toDo(data))
-//     });
-// }
-
-
-    window.addEventListener('hashchange', () => {
-        switch(location.hash) {
-            
-            case '#todo':
-                fetch(API)
+        case '#todo':
+            fetch(API)
                 .then((response) => response.json())
-                .then ((data) => toDo(data))
+                .then((data) => toDo(data))
             break;
 
-            case '#done':
-                fetch(API)
+        case '#done':
+            fetch(API)
                 .then((response) => response.json())
                 .then((data) => done(data))
             break;
 
-            case '#add':
-                add();
+        case '#add':
+            add();
             break;
 
-            case '':
-                mainPage();
+        case '':
+            mainPage();
             break;
-        }
-    })
+    }
+})
+
 

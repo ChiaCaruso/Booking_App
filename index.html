@@ -13,11 +13,14 @@
   <!-- GOOGLE FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" href="img/favicon.png"/>
 
   <title>Booking app</title>
 
@@ -25,21 +28,26 @@
 
 <body>
 
-  <header>
-    <h1>Booking app</h1>
-    <h3>Cooding Bootcamp - Edgemony</h3>
+  <header id="top">
+    <a href="#"><h1>Booking app</h1></a>
+    <h3 id="text"></h3>
   </header>
 
   <div id="wrapper"></div>
 
+  <div class="modale">
+    <p class="modale-text"></p>
+  </div>
+
   <footer>
     <img src="./img/footer.png" alt="logo" width="30" height="30">
-    <p>Designed by Chiara Caruso</p>
+    <p>Designed by <a href="https://www.linkedin.com/in/chiara-caruso-0b66b386/">Chiara Caruso</a></p>
   </footer>
 
 
   <!-- SCRIPT -->
   <script src="./js/script.js" type="module"></script>
+  <script src="./js/animate-text.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,9 @@
 import { render } from "../js/data.js";
 
+/**
+ * Render of Home Page
+ */
+
 const mainPage = () => {
 
     const wrapper = document.querySelector("#wrapper");
