@@ -8,7 +8,7 @@ const toDo = (data) => {
 
     const todoItems = data
         .filter(checked => checked.completed === false)
-        .map(item => `<li>${item.title} <button class="delete change-completed" id="${item.id}"><img src="../img/delete.png" width="35"></button></li>`)
+        .map(item => `<li>${item.title} <button class="delete change-completed" id="${item.id}"><img src="./img/delete.png" width="35"></button></li>`)
         .join("");
 
     const wrapper = document.querySelector("#wrapper");
