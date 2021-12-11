@@ -1,4 +1,4 @@
-import { render } from "../js/data.js";
+import { render, todos } from "../js/data.js";
 
 /**
  * Render of "Visite completate" section
@@ -8,7 +8,7 @@ const done = (data) => {
 
     const doneItems = data
         .filter(checked => checked.completed)
-        .map(item => `<li>${item.title} <button class="delete delete-item" id="${item.id}"><img src="./img/delete.png" width="35"></button></li>`)
+        .map(item => `<li>${item.title} <button class="delete delete-item" id="${item.id}" onclick="return confirm('Vuoi eliminare la visita?');"></button></li>`)
         .join("");
 
     const wrapper = document.querySelector("#wrapper");
@@ -50,13 +50,14 @@ const done = (data) => {
     btnsDelete.forEach(btn => {
         btn.addEventListener("click", (event) => {
             const id = parseInt(event.target.id);
-            const select = data.filter((item) => item.id !== id);
 
-            fetch(`${API}/${id}`, {
-                method: 'DELETE'
-            })
-                .then(response => response.json())
-                .then(() => done(select));
+            if (confirm){
+                const filtered = todos.filter((item) => item.id !== id);
+                return done(filtered);
+            } else {
+                return done;
+            }
+
 
         })
     })

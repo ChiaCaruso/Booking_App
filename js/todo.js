@@ -1,4 +1,4 @@
-import { render, API } from "../js/data.js";
+import { render, todos } from "../js/data.js";
 
 /**
  * Render of "Prenotazioni in attesa" section
@@ -8,7 +8,7 @@ const toDo = (data) => {
 
     const todoItems = data
         .filter(checked => checked.completed === false)
-        .map(item => `<li>${item.title} <button class="delete change-completed" id="${item.id}"><img src="./img/delete.png" width="35"></button></li>`)
+        .map(item => `<li>${item.title} <button class="checked change-completed" id="${item.id}"></button></li>`)
         .join("");
 
     const wrapper = document.querySelector("#wrapper");
@@ -50,17 +50,14 @@ const toDo = (data) => {
     btnsChange.forEach(btn => {
         btn.addEventListener("click", (event) => {
             const id = parseInt(event.target.id);
-
-            fetch(`${API}/${id}`, {
-                method: 'PATCH',
-                headers: {
-                    "Content-Type": "application/JSON"
-                },
-                body: JSON.stringify({
-                    completed: true
-                }),
+            const deleteItem = todos.map( item => {
+                if (item.id === id){
+                    item.completed = true;
+                }
             })
-                .then(response => response.json())
+            const filtered = todos.filter((item) => item.id !== id);
+
+            return toDo(filtered);
 
         })
     })

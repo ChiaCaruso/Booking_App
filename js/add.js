@@ -1,4 +1,4 @@
-import { render, API } from "../js/data.js";
+import { render, todos } from "../js/data.js";
 
 /**
  * Render of "Aggiungi prenotazione" section
@@ -20,12 +20,12 @@ const add = () => {
                 <form id="patient">
                     <div class="row">
                         <label for="id">ID paziente:</label>
-                        <input type="text" id="id" name="id" placeholder="ID">
+                        <input type="text" id="id" name="id" placeholder="ID" required>
                      </div>
 
                     <div class="row">
                         <label for="title">Esami diagnostici:</label>
-                        <textarea id="title" name="title" placeholder="Esami"></textarea>
+                        <textarea id="title" name="title" placeholder="Esami" required></textarea>
                     </div> 
 
                     <button id="btn-add" class="btn" type="submit">Salva</button> 
@@ -35,33 +35,27 @@ const add = () => {
     const form = document.querySelector("#patient");
     form.addEventListener("submit", (event) => {
         event.preventDefault();
-        
+
         const newPatient = {
             userId: 1,
-            id: event.target.id.value,
+            id: parseInt(event.target.id.value),
             title: event.target.title.value,
             completed: false
         };
-        fetch(API, {
-            method: 'POST',
-            headers: {
-                "Content-Type": "application/JSON"
-            },
-            body: JSON.stringify(newPatient)
-        })
-            .then(response => response.json())
-            .then(console.log(newPatient))
-            .then(() => { 
-                const modale = document.querySelector(".modale");
-                const modaleText = document.querySelector(".modale-text");
-                modale.classList.toggle("modale-on");
-                modaleText.textContent = "Prenotazione aggiunta correttamente!";
-                setTimeout(() => {
-                    modale.classList.toggle("modale-on");
-                    form.reset();
-                }, 2000);
-            })
+
+        todos.unshift(newPatient);
+
+        const modale = document.querySelector(".modale");
+        const modaleText = document.querySelector(".modale-text");
+        modale.classList.toggle("modale-on");
+        modaleText.textContent = "Prenotazione aggiunta correttamente!";
+        setTimeout(() => {
+            modale.classList.toggle("modale-on");
+            form.reset();
+        }, 2000);
+
     });
 }
+console.log(todos)
 
 export { add };
