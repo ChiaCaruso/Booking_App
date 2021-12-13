@@ -262,8 +262,7 @@ form{
 
 /* ! ---MODALE--- */
 
-.modale,
-.modale-delete{
+.modale{
     position: fixed;
     border-radius: 8px;
     background: #d08f37;
@@ -285,8 +284,7 @@ form{
     opacity: 1; 
   }
   
-  .modale-text,
-  .modale-delete__text{
+  .modale-text{
     text-align: center;
     color: #fff;
     font-size: 24px;
