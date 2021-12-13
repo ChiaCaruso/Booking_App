@@ -54,12 +54,10 @@ const done = (data) => {
             if (confirm){
                 const filtered = todos.filter((item) => item.id !== id);
                 return done(filtered);
-            } else {
-                return done;
-            }
+            }           
 
 
-        })
+        }, { once: true })
     })
 
 }
