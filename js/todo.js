@@ -50,8 +50,8 @@ const toDo = (data) => {
     btnsChange.forEach(btn => {
         btn.addEventListener("click", (event) => {
             const id = parseInt(event.target.id);
-            const deleteItem = todos.map( item => {
-                if (item.id === id){
+            const deleteItem = todos.map(item => {
+                if (item.id === id) {
                     item.completed = true;
                 }
             })

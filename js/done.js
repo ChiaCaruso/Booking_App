@@ -51,10 +51,10 @@ const done = (data) => {
         btn.addEventListener("click", (event) => {
             const id = parseInt(event.target.id);
 
-            if (confirm){
+            if (confirm) {
                 const filtered = todos.filter((item) => item.id !== id);
                 return done(filtered);
-            }           
+            }
 
 
         }, { once: true })

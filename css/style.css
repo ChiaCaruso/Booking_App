@@ -373,6 +373,13 @@ footer a{
         margin: 10px 0;
     }
 
+    .checked,
+    .delete{
+        opacity: 1;
+        background-color: transparent;
+        border: none;
+    }
+
     .delete img{
         transform: translateX(0px);
     }

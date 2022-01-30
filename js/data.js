@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", getData);
  * Main function to rendering the page with each section
  */
 
-const render = (wrapper, elements) => {wrapper.innerHTML = elements};
+const render = (wrapper, elements) => { wrapper.innerHTML = elements };
 
 
 export { todos, render };
