@@ -462,10 +462,6 @@ footer a{
         margin-top: 50px; 
     }
 
-    .delete img{
-        transform: translateX(-16px);
-    }
-
     #btn-up {
         right: 10px;
     }
