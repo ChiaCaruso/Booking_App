@@ -327,7 +327,7 @@ footer a{
     }
 
     .wrapper-mainPage{
-        display: flex;
+        margin: 100px 50px 150px;
         flex-direction: column;
         align-items: center;
     }
